@@ -23,3 +23,17 @@ def transaction_descriptions(transactions: list[dict]) -> Iterator[str]:
 descriptions = transaction_descriptions(transactions)
 for _ in range(5):
     print(next(descriptions))
+
+def card_number_generator(start: int, end: int) -> Iterator[str]:
+    """Генератор банковских карт.который выдает номера банковских карт в формате XXXX XXXX XXXX XXXX"""
+    if start > end or start == end:
+        raise ValueError("Ошибка. Неверные значения диапазона")
+    for num in range(start, end + 1):
+        # Преобразуем число в 16-значную строку с ведущими нулями
+        digits = f"{num:016d}"
+        # Форматируем по 4 цифры
+        formatted = f"{digits[:4]} {digits[4:8]} {digits[8:12]} {digits[12:]}"
+        yield formatted
+
+for card_number in card_number_generator(1, 5):
+    print(card_number)
