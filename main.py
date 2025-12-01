@@ -1,7 +1,8 @@
-from src.processing import filter_by_state
-from src.processing import sorted_by_date
-from src.widget import get_date
-from src.widget import mask_account_card
+from src.processing import filter_by_state, sorted_by_date
+from src.widget import get_date, mask_account_card
+from src.generators import card_number_generator
+from src.generators import transaction_descriptions
+from src.generators import filter_by_currency
 
 
 
@@ -112,3 +113,11 @@ if __name__ == "__main__":
             }
         ]
     )
+    usd_transactions = filter_by_currency(transactions, "USD")
+    for _ in range(2):
+        print(next(usd_transactions))
+    descriptions = transaction_descriptions(transactions)
+    for _ in range(5):
+        print(next(descriptions))
+    for card_number in card_number_generator(1, 5):
+        print(card_number)

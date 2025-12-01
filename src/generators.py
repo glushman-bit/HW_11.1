@@ -86,9 +86,7 @@ def filter_by_currency(transactions: list[dict], currency: str) -> Iterator[dict
         if op_currency == currency:
             yield item
 
-usd_transactions = filter_by_currency(transactions, "USD")
-for _ in range(2):
-    print(next(usd_transactions))
+
 
 def transaction_descriptions(transactions: list[dict]) -> Iterator[str]:
     """Генератор, который по очереди выдаёт описание транзакций.
@@ -98,9 +96,7 @@ def transaction_descriptions(transactions: list[dict]) -> Iterator[str]:
         if description is not None:
             yield description
 
-descriptions = transaction_descriptions(transactions)
-for _ in range(5):
-    print(next(descriptions))
+
 
 def card_number_generator(start: int, end: int) -> Iterator[str]:
     """Генератор банковских карт.который выдает номера банковских карт в формате XXXX XXXX XXXX XXXX"""
