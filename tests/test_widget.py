@@ -1,7 +1,7 @@
 import pytest
-from src.widget import mask_account_card
-from src.widget import get_date
 
+from src.widget import get_date
+from src.widget import mask_account_card
 
 """ Проверка корректности распознавания входных данных, проверка с разными типами карт и счетов """
 

@@ -1,9 +1,10 @@
-from typing import Generator
+from types import GeneratorType
 
 import pytest
-from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
-from types import GeneratorType
-from typing import Any
+
+from src.generators import card_number_generator
+from src.generators import filter_by_currency
+from src.generators import transaction_descriptions
 
 """ Входные данные для проверки работы генератора фильтрации по валюте."""
 transactions_sample_currency = [
