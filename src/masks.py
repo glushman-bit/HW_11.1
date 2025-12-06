@@ -18,7 +18,7 @@ def get_mask_card_number(number_card: str, mask_char: str = "*", group_size: int
         mask_section = mask_char * (len(number_card) - 10)
         mask_number = number_card[:6] + mask_section + number_card[-4:]
     # Группировка номера
-    group_number = " ".join([mask_number[i: i + group_size] for i in range(0, len(mask_number), group_size)])
+    group_number = " ".join([mask_number[i : i + group_size] for i in range(0, len(mask_number), group_size)])
     return group_number
 
 
@@ -28,11 +28,10 @@ def get_mask_account(number_account: str, mask_char: str = "*") -> str:
         raise ValueError("Номер должен содержать только цифры")
 
     mask_part = mask_char * 2
-            # указывает сколько символов перед открытым номером
+    # указывает сколько символов перед открытым номером
     mask_number = mask_part + number_account[-4:]
 
     if len(number_account) != 20:
         raise ValueError("Введен не верный номер")
 
     return mask_number
-
