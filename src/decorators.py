@@ -1,7 +1,8 @@
+from datetime import datetime
 from functools import wraps
 from pathlib import Path
-from datetime import datetime
-from typing import Callable, Optional
+from typing import Callable
+from typing import Optional
 
 log_folder = Path(__file__).parent.parent / "logs"
 log_folder.mkdir(parents=True, exist_ok=True)
@@ -16,8 +17,10 @@ def write_to_file(content: str, log_file: Optional[str]) -> None:
     else:
         print(content)
 
-def log(filename: Optional[str]=log_file) -> Callable:
-    """ Декоратор, который создает log-и на работу функции и ее результат в файл или консоль. """
+
+def log(filename: Optional[str] = log_file) -> Callable:
+    """Декоратор, который создает log-и на работу функции и ее результат в файл или консоль."""
+
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
@@ -25,16 +28,20 @@ def log(filename: Optional[str]=log_file) -> Callable:
             try:
                 result = func(*args, **kwargs)
                 time_end = datetime.now()
-                result_log = f"{func.__name__} ok. Start: {time_start}. Time working: {time_end - time_start} seconds. "
+                result_log = (
+                    f"{func.__name__} ok. Start: {time_start}. Time working: {time_end - time_start} seconds. "
+                )
                 write_to_file(result_log, filename)
                 return result
             except Exception as e:
                 error_log = f"{type(e).__name__}: {e}"
                 write_to_file(error_log, filename)
                 raise
+
         return wrapper
+
     return decorator
+
 
 def my_func(x, y):
     return x + y
-

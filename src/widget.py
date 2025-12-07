@@ -1,8 +1,9 @@
 from datetime import datetime
 
+from src.decorators import log
 from src.masks import get_mask_account
 from src.masks import get_mask_card_number
-from src.decorators import log
+
 
 @log()
 def mask_account_card(number_account: str) -> str:
@@ -24,6 +25,7 @@ def mask_account_card(number_account: str) -> str:
         return f"{name_part} {get_mask_account(number_part)}"
     else:
         return f"{name_part} {get_mask_card_number(number_part)}"
+
 
 @log()
 def get_date(date_str: str) -> str:

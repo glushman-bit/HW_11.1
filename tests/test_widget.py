@@ -25,7 +25,7 @@ def test_mask_card_recognition(number_account, expected):
 """ Проверка на отсутствие номера """
 
 
-def test_no_number_present():
+def test_no_number_present() -> None:
     with pytest.raises(ValueError):
         mask_account_card("Просто текст без номера")
 
@@ -33,17 +33,17 @@ def test_no_number_present():
 """ Проверка на ввод пустой строки """
 
 
-def test_empty_string():
+def test_empty_string() -> None:
     with pytest.raises(ValueError):
         mask_account_card("Ничего не введено")
 
 
-def test_wrong_number_length():
+def test_wrong_number_length() -> None:
     with pytest.raises(ValueError):
         mask_account_card("Visa 123456")
 
 
-def test_get_date_origin():
+def test_get_date_origin() -> None:
     assert get_date("2019-07-03T18:35:29.512364") == "03.07.2019"
 
 
