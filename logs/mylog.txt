@@ -1,0 +1,10 @@
+get_mask_card_number ok. Start: 2025-12-07 22:22:20.005533. Time working: 0:00:00.000007 seconds. 
+mask_account_card ok. Start: 2025-12-07 22:22:20.005507. Time working: 0:00:00.000559 seconds. 
+get_mask_account ok. Start: 2025-12-07 22:22:20.006421. Time working: 0:00:00.000004 seconds. 
+mask_account_card ok. Start: 2025-12-07 22:22:20.006399. Time working: 0:00:00.000244 seconds. 
+get_date ok. Start: 2025-12-07 22:22:20.006920. Time working: 0:00:00.000033 seconds. 
+filter_by_state ok. Start: 2025-12-07 22:22:20.007178. Time working: 0:00:00.000009 seconds. 
+sorted_by_date ok. Start: 2025-12-07 22:22:20.007377. Time working: 0:00:00.000022 seconds. 
+filter_by_currency ok. Start: 2025-12-07 22:22:30.121034. Time working: 0:00:00.000022 seconds. 
+transaction_descriptions ok. Start: 2025-12-07 22:22:30.148283. Time working: 0:00:00.000007 seconds. 
+card_number_generator ok. Start: 2025-12-07 22:22:30.148896. Time working: 0:00:00.000005 seconds. 

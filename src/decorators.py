@@ -35,8 +35,6 @@ def log(filename: Optional[str]=log_file) -> Callable:
         return wrapper
     return decorator
 
-@log
 def my_func(x, y):
-    """ Функция для проверки декоратора """
     return x + y
 

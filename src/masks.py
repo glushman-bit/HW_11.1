@@ -1,3 +1,7 @@
+from src.decorators import log
+
+
+@log()
 def get_mask_card_number(number_card: str, mask_char: str = "*", group_size: int = 4) -> str:
     # Проверяем что номер состоит из цифр
     if not number_card.isdigit():
@@ -21,7 +25,7 @@ def get_mask_card_number(number_card: str, mask_char: str = "*", group_size: int
     group_number = " ".join([mask_number[i : i + group_size] for i in range(0, len(mask_number), group_size)])
     return group_number
 
-
+@log()
 def get_mask_account(number_account: str, mask_char: str = "*") -> str:
     """Функция, скрывающая номер банковского счета"""
     if not number_account.isdigit():
