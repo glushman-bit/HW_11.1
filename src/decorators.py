@@ -8,25 +8,34 @@ log_file = log_folder / "mylog.txt"
 # создание файла mylog.txt в директории logs
 
 
-def log(filename="mylog.txt") -> None:
-    """ Декоратор, который выводит log работы функции и ее результат в файл или консоль. """
+def write_to_file(content: str, log_file: Optional[str]) -> None:
+    if log_file:
+        with open(log_file, "a", encoding="utf-8") as file:
+            file.write(content + "\n")
+    else:
+        print(content)
+
+def log(filename: Optional[str]=log_file) -> Callable:
+    """ Декоратор, который создает log-и на работу функции и ее результат в файл или консоль. """
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            time_start = time()
-            result = None
+            time_start = datetime.now()
             try:
                 result = func(*args, **kwargs)
-                time_end = time()
-                result_log = f"{func.__name__} ok. Time working: {(time_end - time_start):.6f} seconds. "
+                time_end = datetime.now()
+                result_log = f"{func.__name__} ok. Start: {time_start}. Time working: {time_end - time_start} seconds. "
+                write_to_file(result_log, filename)
+                return result
             except Exception as e:
                 error_log = f"{type(e).__name__}: {e}"
-                result_log = f"{func.__name__} error: {error_log}. Input: {args} {kwargs}"
-            if filename:
-                with open(log_folder / filename, "a", encoding="utf-8") as file:
-                    file.write(str(result_log + "\n"))
-            else:
-                print(result_log)
-            return result
+                write_to_file(error_log, filename)
+                raise
         return wrapper
     return decorator
+
+@log
+def my_func(x, y):
+    """ Функция для проверки декоратора """
+    return x + y
+
