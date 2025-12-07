@@ -1,10 +1,157 @@
-get_mask_card_number ok. Start: 2025-12-07 22:22:20.005533. Time working: 0:00:00.000007 seconds. 
-mask_account_card ok. Start: 2025-12-07 22:22:20.005507. Time working: 0:00:00.000559 seconds. 
-get_mask_account ok. Start: 2025-12-07 22:22:20.006421. Time working: 0:00:00.000004 seconds. 
-mask_account_card ok. Start: 2025-12-07 22:22:20.006399. Time working: 0:00:00.000244 seconds. 
-get_date ok. Start: 2025-12-07 22:22:20.006920. Time working: 0:00:00.000033 seconds. 
-filter_by_state ok. Start: 2025-12-07 22:22:20.007178. Time working: 0:00:00.000009 seconds. 
-sorted_by_date ok. Start: 2025-12-07 22:22:20.007377. Time working: 0:00:00.000022 seconds. 
-filter_by_currency ok. Start: 2025-12-07 22:22:30.121034. Time working: 0:00:00.000022 seconds. 
-transaction_descriptions ok. Start: 2025-12-07 22:22:30.148283. Time working: 0:00:00.000007 seconds. 
-card_number_generator ok. Start: 2025-12-07 22:22:30.148896. Time working: 0:00:00.000005 seconds. 
+get_mask_card_number ok. Time start working: 2025-12-07 22:51:22.144998. Time end working: 2025-12-07 22:51:22.145005. 
+mask_account_card ok. Time start working: 2025-12-07 22:51:22.144970. Time end working: 2025-12-07 22:51:22.145429. 
+get_mask_account ok. Time start working: 2025-12-07 22:51:22.145703. Time end working: 2025-12-07 22:51:22.145706. 
+mask_account_card ok. Time start working: 2025-12-07 22:51:22.145683. Time end working: 2025-12-07 22:51:22.145911. 
+get_date ok. Time start working: 2025-12-07 22:51:22.146147. Time end working: 2025-12-07 22:51:22.146178. 
+filter_by_state ok. Time start working: 2025-12-07 22:51:22.146395. Time end working: 2025-12-07 22:51:22.146402. 
+sorted_by_date ok. Time start working: 2025-12-07 22:51:22.146657. Time end working: 2025-12-07 22:51:22.146675. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:05.718442. Time end working: 2025-12-07 23:04:05.718446. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:05.719111. Time end working: 2025-12-07 23:04:05.719113. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.745778. Time end working: 2025-12-07 23:04:05.745783. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:05.788528. Time end working: 2025-12-07 23:04:05.788531. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:05.790023. Time end working: 2025-12-07 23:04:05.790025. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:05.791547. Time end working: 2025-12-07 23:04:05.791549. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:05.792997. Time end working: 2025-12-07 23:04:05.792998. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:05.794684. Time end working: 2025-12-07 23:04:05.794687. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:05.796402. Time end working: 2025-12-07 23:04:05.796405. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:05.800236. Time end working: 2025-12-07 23:04:05.800239. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:05.801553. Time end working: 2025-12-07 23:04:05.801555. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:05.803628. Time end working: 2025-12-07 23:04:05.803631. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.805071. Time end working: 2025-12-07 23:04:05.805075. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.806691. Time end working: 2025-12-07 23:04:05.806693. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.808498. Time end working: 2025-12-07 23:04:05.808500. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.810640. Time end working: 2025-12-07 23:04:05.810643. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.813429. Time end working: 2025-12-07 23:04:05.813432. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.815290. Time end working: 2025-12-07 23:04:05.815293. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.817049. Time end working: 2025-12-07 23:04:05.817051. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:05.818271. Time end working: 2025-12-07 23:04:05.818272. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:05.820169. Time end working: 2025-12-07 23:04:05.820220. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:05.821638. Time end working: 2025-12-07 23:04:05.821649. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:05.823310. Time end working: 2025-12-07 23:04:05.823318. 
+ValueError: Номер должен содержать только цифры
+ValueError: Номер должен содержать только цифры
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+get_mask_account ok. Time start working: 2025-12-07 23:04:05.843927. Time end working: 2025-12-07 23:04:05.843954. 
+ValueError: Введен не верный номер
+ValueError: Номер должен содержать только цифры
+filter_by_state ok. Time start working: 2025-12-07 23:04:05.849340. Time end working: 2025-12-07 23:04:05.849361. 
+filter_by_state ok. Time start working: 2025-12-07 23:04:05.850999. Time end working: 2025-12-07 23:04:05.851001. 
+filter_by_state ok. Time start working: 2025-12-07 23:04:05.852520. Time end working: 2025-12-07 23:04:05.852522. 
+sorted_by_date ok. Time start working: 2025-12-07 23:04:05.854076. Time end working: 2025-12-07 23:04:05.854096. 
+sorted_by_date ok. Time start working: 2025-12-07 23:04:05.854323. Time end working: 2025-12-07 23:04:05.854330. 
+filter_by_state ok. Time start working: 2025-12-07 23:04:05.855631. Time end working: 2025-12-07 23:04:05.855633. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:05.858832. Time end working: 2025-12-07 23:04:05.858839. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:05.858772. Time end working: 2025-12-07 23:04:05.859317. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:05.861090. Time end working: 2025-12-07 23:04:05.861097. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:05.861080. Time end working: 2025-12-07 23:04:05.861404. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:05.863320. Time end working: 2025-12-07 23:04:05.863330. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:05.863313. Time end working: 2025-12-07 23:04:05.863783. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:05.865569. Time end working: 2025-12-07 23:04:05.865576. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:05.865545. Time end working: 2025-12-07 23:04:05.865956. 
+get_mask_account ok. Time start working: 2025-12-07 23:04:05.868215. Time end working: 2025-12-07 23:04:05.868219. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:05.868199. Time end working: 2025-12-07 23:04:05.868519. 
+get_mask_account ok. Time start working: 2025-12-07 23:04:05.870491. Time end working: 2025-12-07 23:04:05.870495. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:05.870483. Time end working: 2025-12-07 23:04:05.870818. 
+get_mask_account ok. Time start working: 2025-12-07 23:04:05.873348. Time end working: 2025-12-07 23:04:05.873353. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:05.873336. Time end working: 2025-12-07 23:04:05.873763. 
+ValueError: Номер должен содержать только цифры
+ValueError: Номер должен содержать только цифры
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+get_date ok. Time start working: 2025-12-07 23:04:05.882145. Time end working: 2025-12-07 23:04:05.882192. 
+get_date ok. Time start working: 2025-12-07 23:04:05.884406. Time end working: 2025-12-07 23:04:05.884431. 
+get_date ok. Time start working: 2025-12-07 23:04:05.885965. Time end working: 2025-12-07 23:04:05.885980. 
+get_date ok. Time start working: 2025-12-07 23:04:05.887515. Time end working: 2025-12-07 23:04:05.887528. 
+get_date ok. Time start working: 2025-12-07 23:04:05.889158. Time end working: 2025-12-07 23:04:05.889174. 
+ValueError: Invalid isoformat string: '2021/05/17'
+ValueError: Invalid isoformat string: '17-05-2020'
+ValueError: Invalid isoformat string: '2020.05.17'
+ValueError: Invalid isoformat string: 'May 17 2020'
+ValueError: Invalid isoformat string: '2020-5-7'
+ValueError: Invalid isoformat string: ''
+ValueError: Invalid isoformat string: '   '
+ValueError: Invalid isoformat string: 'date:'
+ValueError: Invalid isoformat string: 'not a date'
+filter_by_currency ok. Time start working: 2025-12-07 23:04:21.928732. Time end working: 2025-12-07 23:04:21.928737. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:21.929603. Time end working: 2025-12-07 23:04:21.929606. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:21.957217. Time end working: 2025-12-07 23:04:21.957225. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:22.003610. Time end working: 2025-12-07 23:04:22.003613. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:22.008552. Time end working: 2025-12-07 23:04:22.008556. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:22.010568. Time end working: 2025-12-07 23:04:22.010571. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:22.012684. Time end working: 2025-12-07 23:04:22.012686. 
+filter_by_currency ok. Time start working: 2025-12-07 23:04:22.014176. Time end working: 2025-12-07 23:04:22.014178. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:22.015386. Time end working: 2025-12-07 23:04:22.015387. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:22.016550. Time end working: 2025-12-07 23:04:22.016551. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:22.017634. Time end working: 2025-12-07 23:04:22.017636. 
+transaction_descriptions ok. Time start working: 2025-12-07 23:04:22.018709. Time end working: 2025-12-07 23:04:22.018710. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.019852. Time end working: 2025-12-07 23:04:22.019854. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.022395. Time end working: 2025-12-07 23:04:22.022398. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.024508. Time end working: 2025-12-07 23:04:22.024511. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.025978. Time end working: 2025-12-07 23:04:22.025980. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.027081. Time end working: 2025-12-07 23:04:22.027083. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.028156. Time end working: 2025-12-07 23:04:22.028158. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.029618. Time end working: 2025-12-07 23:04:22.029620. 
+card_number_generator ok. Time start working: 2025-12-07 23:04:22.031063. Time end working: 2025-12-07 23:04:22.031065. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:22.032881. Time end working: 2025-12-07 23:04:22.032952. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:22.034301. Time end working: 2025-12-07 23:04:22.034310. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:22.036252. Time end working: 2025-12-07 23:04:22.036267. 
+ValueError: Номер должен содержать только цифры
+ValueError: Номер должен содержать только цифры
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+get_mask_account ok. Time start working: 2025-12-07 23:04:22.057470. Time end working: 2025-12-07 23:04:22.057506. 
+ValueError: Введен не верный номер
+ValueError: Номер должен содержать только цифры
+filter_by_state ok. Time start working: 2025-12-07 23:04:22.061256. Time end working: 2025-12-07 23:04:22.061284. 
+filter_by_state ok. Time start working: 2025-12-07 23:04:22.062756. Time end working: 2025-12-07 23:04:22.062758. 
+filter_by_state ok. Time start working: 2025-12-07 23:04:22.064103. Time end working: 2025-12-07 23:04:22.064107. 
+sorted_by_date ok. Time start working: 2025-12-07 23:04:22.065401. Time end working: 2025-12-07 23:04:22.065440. 
+sorted_by_date ok. Time start working: 2025-12-07 23:04:22.065700. Time end working: 2025-12-07 23:04:22.065715. 
+filter_by_state ok. Time start working: 2025-12-07 23:04:22.068872. Time end working: 2025-12-07 23:04:22.068875. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:22.071641. Time end working: 2025-12-07 23:04:22.071648. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:22.071579. Time end working: 2025-12-07 23:04:22.072160. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:22.074219. Time end working: 2025-12-07 23:04:22.074228. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:22.074208. Time end working: 2025-12-07 23:04:22.074550. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:22.076668. Time end working: 2025-12-07 23:04:22.076676. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:22.076662. Time end working: 2025-12-07 23:04:22.076941. 
+get_mask_card_number ok. Time start working: 2025-12-07 23:04:22.078273. Time end working: 2025-12-07 23:04:22.078279. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:22.078253. Time end working: 2025-12-07 23:04:22.078566. 
+get_mask_account ok. Time start working: 2025-12-07 23:04:22.080479. Time end working: 2025-12-07 23:04:22.080482. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:22.080465. Time end working: 2025-12-07 23:04:22.080872. 
+get_mask_account ok. Time start working: 2025-12-07 23:04:22.082642. Time end working: 2025-12-07 23:04:22.082645. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:22.082636. Time end working: 2025-12-07 23:04:22.082887. 
+get_mask_account ok. Time start working: 2025-12-07 23:04:22.085219. Time end working: 2025-12-07 23:04:22.085224. 
+mask_account_card ok. Time start working: 2025-12-07 23:04:22.085210. Time end working: 2025-12-07 23:04:22.085581. 
+ValueError: Номер должен содержать только цифры
+ValueError: Номер должен содержать только цифры
+ValueError: Неверная длина номера карты
+ValueError: Неверная длина номера карты
+get_date ok. Time start working: 2025-12-07 23:04:22.092428. Time end working: 2025-12-07 23:04:22.092486. 
+get_date ok. Time start working: 2025-12-07 23:04:22.094084. Time end working: 2025-12-07 23:04:22.094101. 
+get_date ok. Time start working: 2025-12-07 23:04:22.095995. Time end working: 2025-12-07 23:04:22.096011. 
+get_date ok. Time start working: 2025-12-07 23:04:22.097926. Time end working: 2025-12-07 23:04:22.097942. 
+get_date ok. Time start working: 2025-12-07 23:04:22.100179. Time end working: 2025-12-07 23:04:22.100202. 
+ValueError: Invalid isoformat string: '2021/05/17'
+ValueError: Invalid isoformat string: '17-05-2020'
+ValueError: Invalid isoformat string: '2020.05.17'
+ValueError: Invalid isoformat string: 'May 17 2020'
+ValueError: Invalid isoformat string: '2020-5-7'
+ValueError: Invalid isoformat string: ''
+ValueError: Invalid isoformat string: '   '
+ValueError: Invalid isoformat string: 'date:'
+ValueError: Invalid isoformat string: 'not a date'

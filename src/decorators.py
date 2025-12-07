@@ -11,6 +11,7 @@ log_file = log_folder / "mylog.txt"
 
 
 def write_to_file(content: str, log_file: Optional[str]) -> None:
+    """ Функция записи log-файла """
     if log_file:
         with open(log_file, "a", encoding="utf-8") as file:
             file.write(content + "\n")
@@ -29,7 +30,7 @@ def log(filename: Optional[str] = log_file) -> Callable:
                 result = func(*args, **kwargs)
                 time_end = datetime.now()
                 result_log = (
-                    f"{func.__name__} ok. Start: {time_start}. Time working: {time_end - time_start} seconds. "
+                    f"{func.__name__} ok. Time start working: {time_start}. Time end working: {time_end}. "
                 )
                 write_to_file(result_log, filename)
                 return result
@@ -44,4 +45,5 @@ def log(filename: Optional[str] = log_file) -> Callable:
 
 
 def my_func(x, y):
+    """ Функция для проверки декоратора """
     return x + y

@@ -109,6 +109,31 @@ for card_number in card_number_generator(1, 5):
     0000 0000 0000 0005
 ````
 
+### Модуль decorators
+### Декоратор log
+ - автоматически выводит логи начала и конца выполнения функции, а также ее результаты или возникшие ошибки.
+ - принимает не обязательный аргумент filename
+ - результат работы выводит:
+   - если filename задан, логи записываются в указанный файл.
+   - если filename не задан, логи выводятся в консоль.
+
+#### Пример использования функции
+Если filename задан (def log(filename = log_file)):
+````
+logs/mylog.txt >>>
+get_mask_card_number ok. Time start working: 2025-12-07 22:51:22.144998. Time end working: 2025-12-07 22:51:22.145005. 
+mask_account_card ok. Time start working: 2025-12-07 22:51:22.144970. Time end working: 2025-12-07 22:51:22.145429. 
+get_mask_account ok. Time start working: 2025-12-07 22:51:22.145703. Time end working: 2025-12-07 22:51:22.145706. 
+````
+Если filename не задан (def log(filename = None)):
+````
+в консоли >>>
+get_mask_card_number ok. Time start working: 2025-12-07 23:00:50.432548. Time end working: 2025-12-07 23:00:50.432554. 
+mask_account_card ok. Time start working: 2025-12-07 23:00:50.432522. Time end working: 2025-12-07 23:00:50.432584. 
+Visa Platinum 7000 79** **** 9999
+
+````
+
 ### Общие аспекты тестирования
 Для всех тестов созданы фикстуры и параметры, которые предоставляют тестовые данные для списков словарей, включая различные случаи и комбинации.
 
