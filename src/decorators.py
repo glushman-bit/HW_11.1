@@ -1,6 +1,7 @@
 from functools import wraps
 from pathlib import Path
-from time import time
+from datetime import datetime
+from typing import Callable, Optional
 
 log_folder = Path(__file__).parent.parent / "logs"
 log_folder.mkdir(parents=True, exist_ok=True)
