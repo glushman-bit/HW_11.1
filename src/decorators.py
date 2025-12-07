@@ -1,4 +1,3 @@
-
 from functools import wraps
 from pathlib import Path
 from time import time
@@ -7,6 +6,7 @@ log_folder = Path(__file__).parent.parent / "logs"
 log_folder.mkdir(parents=True, exist_ok=True)
 log_file = log_folder / "mylog.txt"
 # создание файла mylog.txt в директории logs
+
 
 def log(filename="mylog.txt") -> None:
     """ Декоратор, который выводит log работы функции и ее результат в файл или консоль. """
@@ -30,4 +30,3 @@ def log(filename="mylog.txt") -> None:
             return result
         return wrapper
     return decorator
-
