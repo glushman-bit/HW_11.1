@@ -25,17 +25,15 @@ def log(filename: Optional[str] = log_file) -> Callable:
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            time_start = datetime.now()
+            datetime.now()
             try:
                 result = func(*args, **kwargs)
-                time_end = datetime.now()
-                result_log = (
-                    f"{func.__name__} ok. Time start working: {time_start}. Time end working: {time_end}. "
-                )
+                datetime.now()
+                result_log = f"{func.__name__} ok."
                 write_to_file(result_log, filename)
                 return result
             except Exception as e:
-                error_log = f"{type(e).__name__}: {e}"
+                error_log = f"{func.__name__}: {type(e).__name__}: {e}"
                 write_to_file(error_log, filename)
                 raise
 
