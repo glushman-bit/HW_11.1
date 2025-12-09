@@ -1,9 +1,11 @@
 from datetime import datetime
 
+from src.decorators import log
 from src.masks import get_mask_account
 from src.masks import get_mask_card_number
 
 
+@log()
 def mask_account_card(number_account: str) -> str:
     """Функция обработки информации о картах и счетах"""
 
@@ -25,6 +27,7 @@ def mask_account_card(number_account: str) -> str:
         return f"{name_part} {get_mask_card_number(number_part)}"
 
 
+@log()
 def get_date(date_str: str) -> str:
     """Функция преобразования даты"""
     date_obj = datetime.fromisoformat(date_str)

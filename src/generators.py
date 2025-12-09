@@ -1,5 +1,7 @@
 from typing import Iterator
 
+from src.decorators import log
+
 transactions = [
     {
         "id": 939719570,
@@ -49,6 +51,7 @@ transactions = [
 ]
 
 
+@log()
 def filter_by_currency(transactions: list[dict], currency: str) -> Iterator[dict]:
     """Функция, которая фильтрует транзакции по коду валюты."""
     for item in transactions:
@@ -62,6 +65,7 @@ for _ in range(2):
     print(next(usd_transactions))
 
 
+@log()
 def transaction_descriptions(transactions: list[dict]) -> Iterator[str]:
     """Генератор, который по очереди выдаёт описание транзакций.
     Если у транзакции нет поля description — пропускает её."""
@@ -76,6 +80,7 @@ for _ in range(5):
     print(next(descriptions))
 
 
+@log()
 def card_number_generator(start: int, stop: int) -> Iterator[str]:
     """Генератор банковских карт.который выдает номера банковских карт в формате XXXX XXXX XXXX XXXX"""
     if start > stop or start == stop:
