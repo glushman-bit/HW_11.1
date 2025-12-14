@@ -11,7 +11,7 @@ log_file = log_folder / "mylog.txt"
 
 
 def write_to_file(content: str, log_file: Optional[str]) -> None:
-    """ Функция записи log-файла """
+    """Функция записи log-файла"""
     if log_file:
         with open(log_file, "a", encoding="utf-8") as file:
             file.write(content + "\n")
@@ -43,5 +43,5 @@ def log(filename: Optional[str] = log_file) -> Callable:
 
 
 def my_func(x, y):
-    """ Функция для проверки декоратора """
+    """Функция для проверки декоратора"""
     return x + y

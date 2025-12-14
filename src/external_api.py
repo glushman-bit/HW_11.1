@@ -1,4 +1,5 @@
 import os
+
 import requests
 from dotenv import load_dotenv
 
@@ -6,8 +7,9 @@ load_dotenv()
 
 API_KEY = os.environ.get("API_KEY")
 
+
 def converter_currency(transaction: float, currency: str) -> float:
-    """ Функция конвертации валюты в рубли """
+    """Функция конвертации валюты в рубли"""
 
     currency_convert = ["USD", "EUR"]
 
@@ -32,9 +34,7 @@ def converter_currency(transaction: float, currency: str) -> float:
             "from": currency,
             "amount": transaction,
         }
-        headers = {
-            "apikey": API_KEY
-        }
+        headers = {"apikey": API_KEY}
 
         response = requests.get(url, params=params, headers=headers, timeout=10)
 
@@ -44,7 +44,7 @@ def converter_currency(transaction: float, currency: str) -> float:
 
         response_json = response.json()
 
-        result: float = round(response_json['result'], 2)
+        result: float = round(response_json["result"], 2)
         return result
 
     return transaction

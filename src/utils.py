@@ -1,7 +1,6 @@
 import json
-from typing import Optional
 from pathlib import Path
-
+from typing import Optional
 
 log_folder = Path(__file__).parent.parent / "data"
 log_folder.mkdir(parents=True, exist_ok=True)
@@ -9,7 +8,7 @@ path = log_folder / "operations.json"
 
 
 def get_transactions_from_file(path: Optional[str]) -> list[dict]:
-    """ Получение данных из файла json """
+    """Получение данных из файла json"""
 
     operations = []
     try:
@@ -20,11 +19,11 @@ def get_transactions_from_file(path: Optional[str]) -> list[dict]:
                 print("Mistakes decoder file")
                 return operations
 
-        if not isinstance(operations, list): # если файл не список
+        if not isinstance(operations, list):  # если файл не список
             print("Type not supported.")
             return []
 
-    except FileNotFoundError: # если файл не найден
+    except FileNotFoundError:  # если файл не найден
         print("File not found")
 
     return operations
