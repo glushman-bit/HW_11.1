@@ -1,7 +1,9 @@
-from unittest.mock import Mock, patch
-from src.external_api import converter_currency
+from unittest.mock import Mock
+from unittest.mock import patch
+
 import pytest
 
+from src.external_api import converter_currency
 
 
 @patch("requests.get")
@@ -38,7 +40,6 @@ def test_converter_currency_invalid_transaction():
         converter_currency("1", "USD")
 
 
-
-def test_converter_currency_negative_transaction():
+def test_converter_currency_negative_transaction() -> None:
     with pytest.raises(ValueError, match="Сумма транзакции не может быть отрицательной"):
         converter_currency(-1, "USD")
