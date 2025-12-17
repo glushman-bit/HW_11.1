@@ -15,7 +15,7 @@ def converter_currency(transaction: float, currency: str) -> float:
 
     if not isinstance(transaction, (int, float)):
         # Проверка, что transaction число
-        raise ValueError(f"Введена неверная сумма транзакции")
+        raise ValueError("Введена неверная сумма транзакции")
 
     if transaction < 0:
         # Проверка ввод отрицательного числа
