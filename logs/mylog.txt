@@ -5,3 +5,180 @@ mask_account_card ok.
 get_date ok.
 filter_by_state ok.
 sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Неверная длина номера карты
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+mask_account_card: ValueError: Номер должен содержать только цифры
+mask_account_card: ValueError: Номер должен содержать только цифры
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Номер должен содержать только цифры
+mask_account_card: ValueError: Номер должен содержать только цифры
+get_mask_card_number: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Неверная длина номера карты
+get_mask_card_number: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Номер должен содержать только цифры
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+mask_account_card: IndexError: list index out of range
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account: ValueError: Введен не верный номер
+mask_account_card: ValueError: Введен не верный номер
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+mask_account_card: ValueError: Номер должен содержать только цифры
+mask_account_card: ValueError: Номер должен содержать только цифры
+mask_account_card: ValueError: Номер должен содержать только цифры
+mask_account_card: IndexError: list index out of range
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+mask_account_card: ValueError: Номер должен содержать только цифры
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+mask_account_card: NameError: name 'logger' is not defined
+mask_account_card: NameError: name 'logger' is not defined
+mask_account_card: ValueError: Номер должен содержать только цифры
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Неверная длина номера карты
+get_mask_card_number: ValueError: Неверная длина номера карты
+mask_account_card: ValueError: Неверная длина номера карты
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account: ValueError: Введен не верный номер
+mask_account_card: ValueError: Введен не верный номер
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account: ValueError: Введен не верный номер
+mask_account_card: ValueError: Введен не верный номер
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account: ValueError: Введен не верный номер
+mask_account_card: ValueError: Введен не верный номер
+get_mask_card_number ok.
+mask_account_card ok.
+get_mask_account ok.
+mask_account_card ok.
+get_date ok.
+filter_by_state ok.
+sorted_by_date ok.
