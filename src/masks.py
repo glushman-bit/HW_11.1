@@ -1,12 +1,14 @@
-from src.decorators import log
 import logging
 
-logger = logging.getLogger('masks.log')
+from src.decorators import log
+
+logger = logging.getLogger("masks.log")
 logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler('logs/masks.log', mode='w', encoding='utf-8')
-file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s: - %(message)s')
+file_handler = logging.FileHandler("logs/masks.log", mode="w", encoding="utf-8")
+file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s: - %(message)s")
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
+
 
 @log()
 def get_mask_card_number(number_card: str, mask_char: str = "*", group_size: int = 4) -> str:
