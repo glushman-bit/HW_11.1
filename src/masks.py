@@ -3,8 +3,8 @@ import logging
 from src.decorators import log
 
 logger = logging.getLogger("masks.log")
-logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler("logs/masks.log", mode="w", encoding="utf-8")
+logger.setLevel(logging.DEBUG)
+file_handler = logging.FileHandler("../logs/masks.log", mode="w", encoding="utf-8")
 file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s: - %(message)s")
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
@@ -35,7 +35,11 @@ def get_mask_card_number(number_card: str, mask_char: str = "*", group_size: int
     # Группировка номера
     group_number = " ".join([mask_number[i : i + group_size] for i in range(0, len(mask_number), group_size)])
     logger.info("Успешный ввод номера карты.")
+
     return group_number
+
+if __name__ == "__main__":
+    print(get_mask_card_number("7000792289999999"))
 
 
 @log()
@@ -54,4 +58,8 @@ def get_mask_account(number_account: str, mask_char: str = "*") -> str:
         raise ValueError("Введен не верный номер")
 
     logger.info("Успешный ввод номера счета.")
+
     return mask_number
+
+if __name__ == "__main__":
+    print(get_mask_account("73654108430135874390"))
