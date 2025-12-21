@@ -27,7 +27,7 @@ def read_data_from_csv(csv_path: Union[Path,str]) -> List[Dict[str, str]]:
     except Exception as e:
         raise RuntimeError(f"Неизвестная ошибка при чтении CSV: {e}")
 
-print(read_data_from_csv(csv_path))
+
 
 def read_data_from_excel(xls_path:Union[Path,str]) -> List[Dict[str, str]]:
     """ Функция считывания данных из xlsx файла """
@@ -42,6 +42,7 @@ def read_data_from_excel(xls_path:Union[Path,str]) -> List[Dict[str, str]]:
         raise RuntimeError("Неизвестная ошибка при чтении xlsx: {e}")
 
 
-#print(read_data_from_excel(xlsx_path))
 
-
+if __name__ == "__main__":
+    print(read_data_from_excel(xlsx_path))
+    print(read_data_from_csv(csv_path))
