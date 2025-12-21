@@ -10,10 +10,10 @@ DATA_DIR = BASE_DIR / "data"
 
 csv_path = DATA_DIR / "transactions.csv"
 xlsx_path = DATA_DIR / "transactions_excel.xlsx"
-def read_data_from_csv(csv_path:Union[Path,str]) -> List[Dict[str, str]]:
+def read_data_from_csv(csv_path: Union[Path,str]) -> List[Dict[str, str]]:
     """ Функция считывания данных из csv файла """
     try:
-        with open(scv_path, "r", newline="", encoding="utf-8") as file:
+        with open(csv_path, "r", newline="", encoding="utf-8") as file:
             reader = csv.DictReader(file)
 
             return [dict(row) for row in reader]
@@ -27,9 +27,7 @@ def read_data_from_csv(csv_path:Union[Path,str]) -> List[Dict[str, str]]:
     except Exception as e:
         raise RuntimeError(f"Неизвестная ошибка при чтении CSV: {e}")
 
-
-
-
+print(read_data_from_csv(csv_path))
 
 def read_data_from_excel(xls_path:Union[Path,str]) -> List[Dict[str, str]]:
     """ Функция считывания данных из xlsx файла """
@@ -44,6 +42,6 @@ def read_data_from_excel(xls_path:Union[Path,str]) -> List[Dict[str, str]]:
         raise RuntimeError("Неизвестная ошибка при чтении xlsx: {e}")
 
 
-
+#print(read_data_from_excel(xlsx_path))
 
 
