@@ -1,17 +1,20 @@
 import csv
-from unittest.mock import patch, mock_open
+from unittest.mock import mock_open
+from unittest.mock import patch
 
 import pandas as pd
 import pytest
 
-from src.reading_files import read_data_from_csv, read_data_from_excel
+from src.reading_files import read_data_from_csv
+from src.reading_files import read_data_from_excel
 
 
 def test_csv_read():
-    """ Тест на правильность работы функции """
+    """Тест на правильность работы функции"""
     mock_csv_content = "id,amount,currency\n1,100,RUB\n2,200,USD\n"
-    with patch("src.reading_files.Path.exists", return_value=True), \
-         patch("builtins.open", mock_open(read_data=mock_csv_content)):
+    with patch("src.reading_files.Path.exists", return_value=True), patch(
+        "builtins.open", mock_open(read_data=mock_csv_content)
+    ):
         result = read_data_from_csv("dummy.csv")
         assert isinstance(result, list)
         assert len(result) == 2
@@ -20,37 +23,37 @@ def test_csv_read():
 
 
 def test_csv_not_found():
-    """ Тест: ошибка при отсутствии csv-файла """
+    """Тест: ошибка при отсутствии csv-файла"""
     with patch("src.reading_files.Path.exists", return_value=False):
         fake_csv_content = "non.csv"
         with pytest.raises(FileNotFoundError):
             read_data_from_csv(fake_csv_content)
 
+
 def test_csv_error_read():
-    """ Тест: ошибка чтения csv-файла """
-    with patch("src.reading_files.Path.exists", return_value=True), \
-         patch("builtins.open", mock_open(read_data="error.csv")), \
-         patch("csv.DictReader", side_effect=csv.Error):
+    """Тест: ошибка чтения csv-файла"""
+    with patch("src.reading_files.Path.exists", return_value=True), patch(
+        "builtins.open", mock_open(read_data="error.csv")
+    ), patch("csv.DictReader", side_effect=csv.Error):
         with pytest.raises(ValueError, match="Ошибка чтения CSV-файла"):
             read_data_from_csv("file.csv")
 
 
 def test_csv_unknown_error():
-    """ Тест: неизвестная ошибка csv-файла """
-    with patch("src.reading_files.Path.exists", return_value=True), \
-         patch("builtins.open", side_effect=RuntimeError):
+    """Тест: неизвестная ошибка csv-файла"""
+    with patch("src.reading_files.Path.exists", return_value=True), patch("builtins.open", side_effect=RuntimeError):
         with pytest.raises(RuntimeError, match="Неизвестная ошибка при чтении CSV"):
             read_data_from_csv("file.csv")
 
 
 def test_excel_read():
-    """ Тест на правильность работы функции """
-    df = pd.DataFrame([
-        {"id": "3", "amount": "300", "currency": "EUR"},
-        {"id": "4", "amount": "400", "currency": "GBP"}
-    ])
-    with patch("src.reading_files.Path.exists", return_value=True), \
-         patch("src.reading_files.pd.read_excel", return_value=df):
+    """Тест на правильность работы функции"""
+    df = pd.DataFrame(
+        [{"id": "3", "amount": "300", "currency": "EUR"}, {"id": "4", "amount": "400", "currency": "GBP"}]
+    )
+    with patch("src.reading_files.Path.exists", return_value=True), patch(
+        "src.reading_files.pd.read_excel", return_value=df
+    ):
         result = read_data_from_excel("dummy.xlsx")
         assert isinstance(result, list)
         assert len(result) == 2
@@ -59,17 +62,16 @@ def test_excel_read():
 
 
 def test_excel_not_found(tmp_path):
-    """ Тест: ошибка при отсутствии xlsx-файла """
+    """Тест: ошибка при отсутствии xlsx-файла"""
     missing_file = tmp_path / "missing.xlsx"
     with pytest.raises(FileNotFoundError, match="Файл не найден"):
         read_data_from_excel(missing_file)
 
 
 def test_xlsx_unknown_error():
-    """ Тест: неизвестная ошибка xlsx-файла """
-    with patch("src.reading_files.Path.exists", return_value=True), \
-         patch("src.reading_files.pd.read_excel", side_effect=Exception):
+    """Тест: неизвестная ошибка xlsx-файла"""
+    with patch("src.reading_files.Path.exists", return_value=True), patch(
+        "src.reading_files.pd.read_excel", side_effect=Exception
+    ):
         with pytest.raises(RuntimeError, match="Неизвестная ошибка при чтении xlsx"):
             read_data_from_excel("file.csv")
-
-
