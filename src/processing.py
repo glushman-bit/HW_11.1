@@ -12,6 +12,7 @@ def filter_by_state(local_list: Iterable[dict], state: str = "EXECUTED") -> list
             filtered_list.append(item)
     return filtered_list
 
+
 if __name__ == "__main__":
     print(
         filter_by_state(
@@ -24,10 +25,12 @@ if __name__ == "__main__":
         )
     )
 
+
 @log()
 def sorted_by_date(local_list: Iterable[dict], ascending: bool = True) -> list:
     """Функция сортировки по дате"""
     return sorted(local_list, key=lambda item: item.get("date"), reverse=not ascending)
+
 
 if __name__ == "__main__":
     print(
