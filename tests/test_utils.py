@@ -25,7 +25,7 @@ from src.utils import get_transactions_from_file
     ],
 )
 def test_get_transactions_from_file_parametrized(read_data, side_effect, expected):
-    """ Тест работы функции """
+    """Тест работы функции"""
     if side_effect:
         with patch("builtins.open", side_effect=side_effect):
             result = get_transactions_from_file("operations.json")
