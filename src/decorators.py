@@ -35,7 +35,7 @@ def log(filename: Optional[str] = log_file) -> Callable:
             except Exception as e:
                 error_log = f"{func.__name__}: {type(e).__name__}: {e}"
                 write_to_file(error_log, filename)
-                raise
+                raise TypeError(error_log)
 
         return wrapper
 

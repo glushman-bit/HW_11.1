@@ -39,8 +39,8 @@ def get_mask_card_number(number_card: str, mask_char: str = "*", group_size: int
     return group_number
 
 
-# if __name__ == "__main__":
-#     print(get_mask_card_number("7000792289999999"))
+if __name__ == "__main__":
+    print(get_mask_card_number("7000792289999999"))
 
 
 @log()

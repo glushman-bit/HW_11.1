@@ -1,43 +1,18 @@
-import json
-import logging
-from pathlib import Path
-from typing import Optional
 
-log_folder = Path(__file__).parent.parent / "data"
-log_folder.mkdir(parents=True, exist_ok=True)
-path = log_folder / "operations.json"
+def count_all_by_category(transactions, categories):
+    """
+    Функция подсчета количества операций по категориям
+    :param transactions: Список словарей транзакции
+    :param categories: Категории
+    :return: Словарь количества по категориям
+    """
+    categories_map = {cat.lower(): cat for cat in categories}
+    result = {cat: 0 for cat in categories}
 
+    for trans in transactions:
+        description = trans.get("description", "").lower()
+        if description in categories_map:
+            original_category = categories_map[description]
+            result[original_category] += 1
 
-logger = logging.getLogger("utils.log")
-logger.setLevel(logging.DEBUG)
-# file_handler = logging.FileHandler("../logs/utils.log", mode="w", encoding="utf-8")
-file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s: - %(message)s")
-# file_handler.setFormatter(file_formatter)
-# logger.addHandler(file_handler)
-
-
-def get_transactions_from_file(path: Optional[str]) -> list[dict]:
-    """Получение данных из файла json"""
-
-    operations = []
-    try:
-        logger.info("открытие файла")
-        with open(path, "r", encoding="utf-8") as f:
-            try:
-                operations = json.load(f)
-            except json.JSONDecodeError as er:  # Обработка ошибки если не верный файл
-                logger.error(f"Ошибка при чтении файла: {er}")
-                return operations
-
-        if not isinstance(operations, list):  # если файл не список
-            logger.error("Тип файла не поддерживается")
-            return []
-
-    except FileNotFoundError as e:  # если файл не найден
-        logger.error(f"Файл не найден {e}")
-
-    return operations
-
-
-if __name__ == "__main__":
-    print(get_transactions_from_file(path))
+    return result
